@@ -1,0 +1,8 @@
+name: LocalGov Starterkit theme
+description: Implements experimental LocalGov Components library
+type: theme
+core_version_requirement: ^10.5 || ^11.2
+# For the generated theme, the default values for description and
+# core_version_requirement come from localgov_starterkit.starterkit.yml.
+'base theme': stable9
+hidden: true

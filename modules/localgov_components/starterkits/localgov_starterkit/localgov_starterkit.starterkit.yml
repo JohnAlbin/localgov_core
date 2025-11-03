@@ -1,0 +1,11 @@
+ignore:
+  - '/src/StarterKit.php'
+  - '/localgov_starterkit.starterkit.yml'
+no_edit:
+  - '/*.md'
+  - '/**/*.md'
+no_rename: []
+info:
+  description: Generated from LocalGov Starterkit
+  core_version_requirement: ^10.5 || ^11.2
+  version: 1.0.0
