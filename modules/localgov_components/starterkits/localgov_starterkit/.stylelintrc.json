@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "./.stylelintrc.core.json"
+  ],
+  "rules": {
+    "color-function-notation": "modern"
+  },
+  "ignoreFiles": [
+    "**/*.min.css",
+    "node_modules/**/*.css",
+    "**/vendor/**/*.css"
+  ]
+}

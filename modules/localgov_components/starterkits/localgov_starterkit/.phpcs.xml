@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="localgov_components">
+  <description>PHP CodeSniffer configuration for LocalGov Starterkit themes.</description>
+
+  <arg name="extensions" value="inc,install,module,php,test,theme,info,txt,md,yml"/>
+  <config name="drupal_core_version" value="10"/>
+
+  <file>.</file>
+
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+  <exclude-pattern>*/vendor/*</exclude-pattern>
+
+  <rule ref="./vendor/drupal/coder/coder_sniffer/Drupal"/>
+  <rule ref="./vendor/drupal/coder/coder_sniffer/DrupalPractice"/>
+
+</ruleset>

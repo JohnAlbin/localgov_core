@@ -1,0 +1,15 @@
+# Ignore everything.
+/*
+
+# Don't ignore source files.
+!/components
+!/css
+!/docs
+!/templates
+!/README.md
+
+# Don't ignore theme config files.
+!/*.yml
+
+# Ignore vendor source files.
+vendor

@@ -1,0 +1,34 @@
+{
+  "name": "localgov_starterkit-dev",
+  "version": "1.0.0",
+  "description": "NPM development scripts for the localgov_starterkit theme.",
+  "main": "index.js",
+  "author": "LocalGov contributors",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "lint": "npm run prettier; npm run lint:css; npm run lint:js; npm run lint:twig; npm run lint:drupal",
+    "lint:setup": "cp ../../../core/.eslintrc.json ./.eslintrc.core.json; cp ../../../core/.prettierrc.json .; cp ../../../core/.stylelintrc.json ./.stylelintrc.core.json",
+    "lint:css": "stylelint \"**/*.css\" --fix",
+    "lint:js": "eslint --fix .",
+    "lint:twig": "./vendor/bin/twig-cs-fixer fix .",
+    "lint:drupal": "./vendor/bin/phpcbf && ./vendor/bin/phpcs",
+    "prettier": "prettier --write \"{.*/**/*,*,**/*}.{js,jsx,ts,tsx,json,md,mdx,yml,css,scss}\"",
+    "prettier:check": "prettier --check \"{.*/**/*,*,**/*}.{js,jsx,ts,tsx,json,md,mdx,yml,css,scss}\"",
+    "ci": "npm run prettier:check && stylelint \"**/*.css\" && eslint . && ./vendor/bin/twig-cs-fixer check . && ./vendor/bin/phpcs",
+    "postinstall": "COMPOSER=composer-dev.json composer install",
+    "test": "npm run ci"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-yml": "^1.19.0",
+    "prettier": "^3.6.2",
+    "stylelint": "^16.25.0",
+    "stylelint-config-standard": "^39.0.1",
+    "stylelint-order": "^7.0.0",
+    "stylelint-prettier": "^5.0.3"
+  }
+}
