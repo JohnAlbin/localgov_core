@@ -13,7 +13,8 @@
         "drupal/metatag": "^2.0.2",
         "drupal/pathauto": "^1.8",
         "drupal/role_delegation": "^1.4",
-        "drupal/token": "^1.7"
+        "drupal/token": "^1.7",
+        "vincentlanglet/twig-cs-fixer": "^3.10"
     },
     "require-dev": {
         "drupal/paragraphs": "^1.12"
