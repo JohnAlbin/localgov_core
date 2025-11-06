@@ -6,14 +6,16 @@
   "author": "LocalGov contributors",
   "license": "GPL-2.0-or-later",
   "scripts": {
-    "lint": "npm run prettier; npm run lint:css; npm run lint:js; npm run lint:twig",
+    "lint": "npm run prettier; npm run lint:css; npm run lint:js; npm run lint:twig; npm run phpcbf",
     "lint:setup": "cp ../../../../../core/.eslintrc.json ./.eslintrc.core.json; cp ../../../../../core/.prettierrc.json .; cp ../../../../../core/.stylelintrc.json ./.stylelintrc.core.json",
     "lint:css": "stylelint \"**/*.css\" --fix",
     "lint:js": "eslint --fix .",
     "lint:twig": "../../../../../../vendor/bin/twig-cs-fixer fix .",
+    "phpcbf": "which phpcbf && phpcbf --standard=Drupal,DrupalPractice --extensions=php,module,inc,install,test,profile,theme,info,txt,yml --ignore=node_modules,vendor . && npm run phpcs",
+    "phpcs": "which phpcs && phpcs --standard=Drupal,DrupalPractice --extensions=php,module,inc,install,test,profile,theme,info,txt,yml --ignore=node_modules,vendor .",
     "prettier": "prettier --write \"{.*/**/*,*,**/*}.{js,jsx,ts,tsx,json,md,mdx,yml,css,scss}\"",
     "prettier:check": "prettier --check \"{.*/**/*,*,**/*}.{js,jsx,ts,tsx,json,md,mdx,yml,css,scss}\"",
-    "ci": "npm run prettier:check && eslint . && stylelint \"**/*.css\" && ../../../../../../vendor/bin/twig-cs-fixer check .",
+    "ci": "npm run prettier:check && eslint . && stylelint \"**/*.css\" && ../../../../../../vendor/bin/twig-cs-fixer check . && npm run phpcs",
     "test": "npm run ci"
   },
   "devDependencies": {
