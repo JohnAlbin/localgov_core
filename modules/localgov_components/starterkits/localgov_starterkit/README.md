@@ -1,6 +1,7 @@
 # LocalGov Starterkit Theme
 
-This theme is generated from the LocalGov Starterkit theme that uses LocalGov’s experimental Components Library.
+This theme is generated from the LocalGov Starterkit theme that uses LocalGov’s
+experimental Components Library.
 
 ## Documentation
 
