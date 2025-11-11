@@ -2,8 +2,7 @@ ignore:
   - '/src/StarterKit.php'
   - '/localgov_starterkit.starterkit.yml'
 no_edit:
-  - '/*.md'
-  - '/**/*.md'
+  - '/docs/UPDATE.md'
 no_rename: []
 info:
   description: Generated from LocalGov Starterkit

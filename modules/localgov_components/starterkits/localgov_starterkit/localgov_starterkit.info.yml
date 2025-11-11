@@ -1,4 +1,4 @@
-name: LocalGov Starterkit theme
+name: LocalGov Starterkit Theme
 description: Implements experimental LocalGov Components library
 type: theme
 core_version_requirement: ^10.5 || ^11.2
