@@ -1,0 +1,6 @@
+name: LocalGov Components
+description: LocalGov Component Library
+package: LocalGov Drupal (Experimental)
+lifecycle: experimental
+type: module
+core_version_requirement: ^10.5 || ^11
